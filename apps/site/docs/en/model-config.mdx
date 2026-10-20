@@ -45,6 +45,7 @@ For a dedicated Planning, Locate, or Insight model, use the corresponding `MIDSC
 | Name | Description |
 |------|-------------|
 | `MIDSCENE_MODEL_PROTOCOL` | HTTP protocol: `openai-chat` (default) or `openai-responses`. The latter requires a provider that supports the Responses API. |
+| `MIDSCENE_MODEL_AUTH_MODE` | Authentication mode: `api-key` (default) or `siwc`. For `siwc`, see [Use your ChatGPT subscription](./chatgpt-subscription). |
 | `MIDSCENE_MODEL_STREAM_MODE` | Defaults to non-streaming (`non-stream`). When set to `stream`, streamed results are aggregated into a complete result before parsing. |
 | `MIDSCENE_MODEL_TIMEOUT` | Hard timeout per AI API request in milliseconds (default intent). Defaults to `180000` (180 seconds). Covers the full request lifetime, including reading the response body. Each retry starts a fresh timeout using the same configuration; retry delays are excluded, so the total call duration may exceed this value. Set to `0` to disable only the Midscene hard timeout. SDK and underlying network timeouts may still apply, and callers can cancel requests with an `AbortSignal`. |
 | `MIDSCENE_MODEL_TEMPERATURE` | Sampling temperature for model responses |
@@ -70,6 +71,7 @@ Set the following if the Planning intent needs a different model:
 | `MIDSCENE_PLANNING_MODEL_API_KEY` | API key |
 | `MIDSCENE_PLANNING_MODEL_BASE_URL` | API endpoint URL (omit the trailing `/chat/completions` or `/responses`) |
 | `MIDSCENE_PLANNING_MODEL_PROTOCOL` | HTTP protocol: `openai-chat` (default) or `openai-responses`. |
+| `MIDSCENE_PLANNING_MODEL_AUTH_MODE` | Authentication mode: `api-key` (default) or `siwc`. For `siwc`, see [Use your ChatGPT subscription](./chatgpt-subscription). |
 | `MIDSCENE_PLANNING_MODEL_STREAM_MODE` | Streaming mode for this model: `stream` or `non-stream` (default). |
 | `MIDSCENE_PLANNING_MODEL_NAME` | Model name |
 | `MIDSCENE_PLANNING_MODEL_FAMILY` | Model family |
@@ -94,6 +96,7 @@ Set the following if the Locate intent needs a different model:
 | `MIDSCENE_LOCATE_MODEL_API_KEY` | API key |
 | `MIDSCENE_LOCATE_MODEL_BASE_URL` | API endpoint URL (omit the trailing `/chat/completions` or `/responses`) |
 | `MIDSCENE_LOCATE_MODEL_PROTOCOL` | HTTP protocol: `openai-chat` (default) or `openai-responses`. |
+| `MIDSCENE_LOCATE_MODEL_AUTH_MODE` | Authentication mode: `api-key` (default) or `siwc`. For `siwc`, see [Use your ChatGPT subscription](./chatgpt-subscription). |
 | `MIDSCENE_LOCATE_MODEL_STREAM_MODE` | Streaming mode for this model: `stream` or `non-stream` (default). |
 | `MIDSCENE_LOCATE_MODEL_NAME` | Model name |
 | `MIDSCENE_LOCATE_MODEL_FAMILY` | Model family |
@@ -116,6 +119,7 @@ Set the following if the Insight intent needs a different model:
 | `MIDSCENE_INSIGHT_MODEL_API_KEY` | API key |
 | `MIDSCENE_INSIGHT_MODEL_BASE_URL` | API endpoint URL (omit the trailing `/chat/completions` or `/responses`) |
 | `MIDSCENE_INSIGHT_MODEL_PROTOCOL` | HTTP protocol: `openai-chat` (default) or `openai-responses`. |
+| `MIDSCENE_INSIGHT_MODEL_AUTH_MODE` | Authentication mode: `api-key` (default) or `siwc`. For `siwc`, see [Use your ChatGPT subscription](./chatgpt-subscription). |
 | `MIDSCENE_INSIGHT_MODEL_STREAM_MODE` | Streaming mode for this model: `stream` or `non-stream` (default). |
 | `MIDSCENE_INSIGHT_MODEL_NAME` | Model name |
 | `MIDSCENE_INSIGHT_MODEL_FAMILY` | Model family |
